@@ -1,5 +1,12 @@
 package class03;
 
+/*
+给定一个数组arr，已知除了一种数只出现1次之外，剩下所有的数都出现了k次，
+如何使用O(1)的额外空间，找到这个数。
+K>1
+ */
+
+
 public class Code04_KTimesOneTime {
 
 	public static int onceNum(int[] arr, int k) {

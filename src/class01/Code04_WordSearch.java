@@ -1,5 +1,22 @@
 package class01;
 
+/*
+给定一个字符类型的二维数组board，和一个字符串组成的列表words。
+可以从board任何位置出发，每一步可以走向上、下、左、右，四个方向，
+但是一条路径已经走过的位置，不能重复走。
+返回words哪些单词可以被走出来。
+例子
+board = [
+  ['o','a','a','n'],
+  ['e','t','a','e'],
+  ['i','h','k','r'],
+  ['i','f','l','v']
+]
+words = ["oath","pea","eat","rain"]
+输出：["eat","oath"]
+ */
+
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -101,7 +118,7 @@ public class Code04_WordSearch {
 			fix++;
 		}
 		// 往上、下、左、右，四个方向尝试
-		board[row][col] = 0;
+		board[row][col] = 0;	// 标0 为了不走回头路
 		if (row > 0) {
 			fix += process(board, row - 1, col, path, cur, res);
 		}
@@ -114,7 +131,7 @@ public class Code04_WordSearch {
 		if (col < board[0].length - 1) {
 			fix += process(board, row, col + 1, path, cur, res);
 		}
-		board[row][col] = cha;
+		board[row][col] = cha;	// 恢复
 		path.pollLast();
 		cur.pass -= fix;
 		return fix;

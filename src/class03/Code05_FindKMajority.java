@@ -1,5 +1,11 @@
 package class03;
 
+/*
+给定一个数组arr，如果有某个数出现次数超过了数组长度的一半，打印这个数，如果没有不打印
+给定一个数组arr和整数k，arr长度为N，如果有某些数出现次数超过了N/K，打印这些数，如果没有不打印
+ */
+
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;

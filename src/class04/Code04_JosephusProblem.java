@@ -1,5 +1,9 @@
 package class04;
 
+/*
+约瑟夫环问题
+ */
+
 public class Code04_JosephusProblem {
 
 	public static class Node {
